@@ -1,0 +1,60 @@
+@page "{id:int}"
+@model RazorPagesRocket.Pages_Rockets.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Rocket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Rocket.Id" />
+            <div class="form-group">
+                <label asp-for="Rocket.Name" class="control-label"></label>
+                <input asp-for="Rocket.Name" class="form-control" />
+                <span asp-validation-for="Rocket.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rocket.LaunchDate" class="control-label"></label>
+                <input asp-for="Rocket.LaunchDate" class="form-control" />
+                <span asp-validation-for="Rocket.LaunchDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rocket.NumberOfEngines" class="control-label"></label>
+                <input asp-for="Rocket.NumberOfEngines" class="form-control" />
+                <span asp-validation-for="Rocket.NumberOfEngines" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rocket.Payload" class="control-label"></label>
+                <input asp-for="Rocket.Payload" class="form-control" />
+                <span asp-validation-for="Rocket.Payload" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rocket.Cores" class="control-label"></label>
+                <input asp-for="Rocket.Cores" class="form-control" />
+                <span asp-validation-for="Rocket.Cores" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rocket.DesiredOrbit" class="control-label"></label>
+                <input asp-for="Rocket.DesiredOrbit" class="form-control" />
+                <span asp-validation-for="Rocket.DesiredOrbit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

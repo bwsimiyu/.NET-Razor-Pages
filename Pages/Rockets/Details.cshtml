@@ -1,0 +1,55 @@
+@page "{id:int}"
+@model RazorPagesRocket.Pages_Rockets.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Rocket</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rocket.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rocket.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rocket.LaunchDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rocket.LaunchDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rocket.NumberOfEngines)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rocket.NumberOfEngines)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rocket.Payload)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rocket.Payload)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rocket.Cores)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rocket.Cores)
+        </dd>
+                <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rocket.DesiredOrbit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rocket.DesiredOrbit)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Rocket.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
